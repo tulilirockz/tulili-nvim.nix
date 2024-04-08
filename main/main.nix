@@ -14,7 +14,7 @@ in
     clipboard.register = "unnamedplus";
     clipboard.providers.wl-copy.enable = true;
 
-    options = {
+    opts = {
       number = true;
       relativenumber = true;
       shiftwidth = 2;
@@ -280,9 +280,11 @@ in
       harpoon.enable = true;
       oil = {
         enable = true;
-        skipConfirmForSimpleEdits = true;
-        deleteToTrash = true;
-        viewOptions.showHidden = true;
+        settings = {
+          skip_confirm_for_simple_edits = true;
+          delete_to_trash = true;
+          view_options.show_hidden = true;
+        };
       };
       leap.enable = true;
       coq-nvim = {
